@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/particles.dir/particles.c.o"
-  "CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
-  "CMakeFiles/particles.dir/__/deps/getopt.c.o"
+  "CMakeFiles/particles.dir/particles.c.obj"
+  "CMakeFiles/particles.dir/__/deps/tinycthread.c.obj"
+  "CMakeFiles/particles.dir/__/deps/getopt.c.obj"
   "particles.pdb"
-  "particles"
+  "particles.exe"
+  "particles.exe.manifest"
+  "libparticles.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

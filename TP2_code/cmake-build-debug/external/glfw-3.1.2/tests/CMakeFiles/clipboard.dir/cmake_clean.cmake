@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/clipboard.dir/clipboard.c.o"
-  "CMakeFiles/clipboard.dir/__/deps/getopt.c.o"
+  "CMakeFiles/clipboard.dir/clipboard.c.obj"
+  "CMakeFiles/clipboard.dir/__/deps/getopt.c.obj"
   "clipboard.pdb"
-  "clipboard"
+  "clipboard.exe"
+  "clipboard.exe.manifest"
+  "libclipboard.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

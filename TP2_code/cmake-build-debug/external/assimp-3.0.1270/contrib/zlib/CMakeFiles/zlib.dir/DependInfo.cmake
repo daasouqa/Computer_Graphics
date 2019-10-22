@@ -4,27 +4,28 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/adler32.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/adler32.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/compress.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/compress.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/crc32.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/crc32.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/deflate.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/deflate.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/inffast.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/inffast.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/inflate.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/inflate.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/inftrees.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/inftrees.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/trees.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/trees.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/zutil.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/zutil.c.o"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/adler32.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/adler32.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/compress.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/compress.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/crc32.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/crc32.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/deflate.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/deflate.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/inffast.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/inffast.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/inflate.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/inflate.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/inftrees.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/inftrees.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/trees.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/trees.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/contrib/zlib/zutil.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/zutil.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
   "GLEW_STATIC"
+  "NO_FSEEKO"
   "TW_NO_DIRECT3D"
   "TW_NO_LIB_PRAGMA"
   "TW_STATIC"
   "_CRT_SECURE_NO_WARNINGS"
   "_LARGEFILE64_SOURCE=1"
-  "_UNIX"
+  "_WINDOWS"
   )
 
 # The include file search paths:

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/glfw-3.1.2/deps/glad.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o"
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/glfw-3.1.2/examples/heightmap.c" "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.o"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/glfw-3.1.2/deps/glad.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.obj"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/glfw-3.1.2/examples/heightmap.c" "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,6 +15,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
   "TW_NO_DIRECT3D"
   "TW_NO_LIB_PRAGMA"
   "TW_STATIC"
+  "UNICODE"
+  "WINVER=0x0501"
   "_CRT_SECURE_NO_WARNINGS"
   )
 
@@ -26,7 +28,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

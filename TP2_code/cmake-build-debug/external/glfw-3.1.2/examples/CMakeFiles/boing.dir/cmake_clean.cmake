@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/boing.dir/boing.c.o"
+  "CMakeFiles/boing.dir/boing.c.obj"
   "boing.pdb"
-  "boing"
+  "boing.exe"
+  "boing.exe.manifest"
+  "libboing.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sharing.dir/sharing.c.o"
+  "CMakeFiles/sharing.dir/sharing.c.obj"
   "sharing.pdb"
-  "sharing"
+  "sharing.exe"
+  "sharing.exe.manifest"
+  "libsharing.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

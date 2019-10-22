@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/empty.dir/empty.c.o"
-  "CMakeFiles/empty.dir/__/deps/tinycthread.c.o"
+  "CMakeFiles/empty.dir/empty.c.obj"
+  "CMakeFiles/empty.dir/__/deps/tinycthread.c.obj"
   "empty.pdb"
-  "empty"
+  "empty.exe"
+  "empty.exe.manifest"
+  "libempty.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

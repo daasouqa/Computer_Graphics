@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/windows.dir/windows.c.o"
+  "CMakeFiles/windows.dir/windows.c.obj"
   "windows.pdb"
-  "windows"
+  "windows.exe"
+  "windows.exe.manifest"
+  "libwindows.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code
+# Install script for directory: C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Tutorials")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,18 +27,13 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
-
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibassimp3.0-r1270-OGLtutsx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/code/libassimp.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/cmake-build-debug/external/assimp-3.0.1270/code/libassimp.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -51,45 +46,45 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/assimp" TYPE FILE FILES
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/anim.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/ai_assert.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/camera.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/color4.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/color4.inl"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/config.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/defs.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/cfileio.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/light.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/material.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/material.inl"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.inl"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.inl"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/mesh.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/postprocess.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/quaternion.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/quaternion.inl"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/scene.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/texture.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/types.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector2.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector2.inl"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector3.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector3.inl"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/version.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/cimport.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/importerdesc.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Importer.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/DefaultLogger.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/ProgressHandler.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/IOStream.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/IOSystem.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Logger.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/LogStream.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/NullLogger.hpp"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/cexport.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Exporter.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/anim.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/ai_assert.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/camera.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/color4.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/color4.inl"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/config.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/defs.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/cfileio.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/light.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/material.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/material.inl"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.inl"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.inl"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/mesh.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/postprocess.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/quaternion.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/quaternion.inl"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/scene.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/texture.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/types.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector2.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector2.inl"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector3.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/vector3.inl"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/version.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/cimport.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/importerdesc.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Importer.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/DefaultLogger.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/ProgressHandler.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/IOStream.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/IOSystem.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Logger.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/LogStream.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/NullLogger.hpp"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/cexport.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Exporter.hpp"
     )
 endif()
 
@@ -103,9 +98,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/assimp/Compiler" TYPE FILE FILES
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Compiler/pushpack1.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Compiler/poppack1.h"
-    "/home/e20180009520/Documents/IMAGINA/S3/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/pstdint.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Compiler/pushpack1.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/../include/assimp/Compiler/poppack1.h"
+    "C:/Users/Ben3i/Documents/IMAGINA/M2/InformatiqueGraphique/TP2_code/external/assimp-3.0.1270/code/pstdint.h"
     )
 endif()
 

@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 // Include GLEW
 #include <GL/glew.h>
@@ -24,99 +25,96 @@ using namespace glm;
 /******************************************************************************/
 /***************           Fonctions à completer         **********************/
 /******************************************************************************/
-void compute_triangle_normals(std::vector<glm::vec3> &triangle_normals, std::vector<glm::vec3> indexed_vertices,
-                              std::vector<std::vector<unsigned short> > triangles);
 
-void compute_smooth_vertex_normals (unsigned int weight_type, std::vector<glm::vec3> & vertex_normals){
+void compute_triangle_normals (const std::vector<glm::vec3> &vertices, const std::vector<std::vector<unsigned short>> &triangles, std::vector<glm::vec3> &triangle_normals);
+
+void compute_smooth_vertex_normals (const std::vector<glm::vec3> &vertices, const std::vector<std::vector<unsigned short>> &triangles, unsigned int weight_type, std::vector<glm::vec3> & vertex_normals){
     
-    std::vector<unsigned short> indices; //Triangles concaténés dans une liste
-    std::vector<std::vector<unsigned short> > triangles;
-    std::vector<glm::vec3> indexed_vertices;
-    std::vector<glm::vec2> indexed_uvs;
-    std::vector<glm::vec3> indexed_normals;
+    vertex_normals.clear();
     
-    //Chargement du fichier de maillage
-    std::string filename("suzanne.off");
-    loadOFF(filename, indexed_vertices, indices, triangles );
+    for (int i=0; i < vertices.size(); i++){
+        vertex_normals.push_back(glm::vec3(0, 0, 0));
+    }
+    std::vector<glm::vec3> triangle_normals;
     
-    for (int i = 0; i < indexed_vertices.size(); ++i) {
-        std::vector<unsigned short> index_triangles_voisins;
+    compute_triangle_normals (vertices, triangles, triangle_normals);
     
-        for (int j = 0; j < indices.size(); j += 3) {
-            if (indices[j] == i || indices[j + 1] == i || indices[j + 2] == i) {
-                index_triangles_voisins.push_back(j/3);
+    for (int k = 0 ; k < triangles.size(); k++){
+        const glm::vec3 normal = triangle_normals[k];
+        const std::vector<unsigned short> triangle = triangles[k];
+        for (unsigned int  j = 0; j < 3; j++) {
+            const glm::vec3 &vj_pos = vertices[ triangle[j] ];
+            unsigned short vj = triangle[j];
+            float w = 1.0; // uniform weights
+            glm::vec3 e0 = vertices[triangle[(j+1)%3]] - vj_pos;
+            glm::vec3 e1 = vertices[triangle[(j+2)%3]] - vj_pos;
+            if (weight_type == 1) { // area weight
+                w = glm::length(glm::cross (e0, e1))/2.;
+            } else if (weight_type == 2) { // angle weight
+                e0 = glm::normalize(e0);
+                e1 = glm::normalize(e1);
+                w = (2.0 - (glm::dot (e0, e1) + 1.0)) / 2.0;
             }
+            if (w <= 0.0)
+                continue;
+            vertex_normals[vj] =vertex_normals[vj] + normal * w;
         }
-    
-        std::vector<std::vector<unsigned short>> triangles_voisins;
-    
-        for (int j = 0; j < index_triangles_voisins.size(); ++j) {
-            triangles_voisins.push_back(triangles[index_triangles_voisins[j]]);
-        }
-    
-        std::vector<vec3> triangles_voisins_normals;
-        compute_triangle_normals(triangles_voisins_normals, indexed_vertices, triangles);
-    
-        glm::vec3 moyenne(0, 0, 0);
-        for (int j = 0; j < triangles_voisins_normals.size(); ++j) {
-            moyenne.x += triangles_voisins_normals[j].x;
-            moyenne.y += triangles_voisins_normals[j].y;
-            moyenne.z += triangles_voisins_normals[j].z;
-        }
-        moyenne.x = moyenne.x / triangles_voisins_normals.size();
-        moyenne.y = moyenne.y / triangles_voisins_normals.size();
-        moyenne.z = moyenne.z / triangles_voisins_normals.size();
         
-        indexed_normals.push_back(moyenne);
+        
     }
     
-    
-    std::cout << "Nombre de normales = " << indexed_normals.size() << std::endl;
-    std::cout << "Nombre de sommets = " << indexed_vertices.size() << std::endl;
-    
-    
-    
-    
-    float w = 1.0; // default: uniform weights
-
-    if (weight_type == 1) { // area weight
-
-    } else if (weight_type == 2) { // angle weight
-
+    for ( unsigned int i=0; i < vertex_normals.size(); i++){
+        vertex_normals[i] = glm::normalize(vertex_normals[i]);
     }
 }
 
-void compute_triangle_normals (std::vector<glm::vec3> & triangle_normals, std::vector<glm::vec3> indexed_vertices, std::vector<std::vector<unsigned short> > triangles){
+void compute_triangle_normals (const std::vector<glm::vec3> & vertices, const std::vector<std::vector<unsigned short> > & triangles, std::vector<glm::vec3> & triangle_normals){
+    
     
     for (int i = 0; i < triangles.size(); ++i) {
-        std::vector<unsigned short> thisTriangle(triangles[i]);
+        const std::vector<unsigned short> currentTriangle = triangles[i];
+        glm::vec3 ab = vertices[currentTriangle[1]] - vertices[currentTriangle[0]];
+        glm::vec3 ac = vertices[currentTriangle[2]] - vertices[currentTriangle[0]];
     
-        glm::vec3 a, b, c;
-        a = vec3(indexed_vertices[thisTriangle[0]].x, indexed_vertices[thisTriangle[0]].y,
-                 indexed_vertices[thisTriangle[0]].z);
-        b = vec3(indexed_vertices[thisTriangle[1]].x, indexed_vertices[thisTriangle[1]].y,
-                 indexed_vertices[thisTriangle[1]].z);
-        c = vec3(indexed_vertices[thisTriangle[2]].x, indexed_vertices[thisTriangle[2]].y,
-                 indexed_vertices[thisTriangle[2]].z);
-    
-        vec3 u(b.x - a.x, b.y - a.y, b.z - a.z);
-        vec3 v(c.x - a.x, c.y - a.y, c.z - a.z);
-    
-        vec3 normal(u.y * v.z - u.z * v.y, u.z * v.x - u.x * v.z, u.x * v.y - u.y * v.x);
+        glm::vec3 normal = glm::cross(ab, ac);
+        normal = glm::normalize(normal);
         triangle_normals.push_back(normal);
     }
 }
 
-void collect_one_ring (std::vector<std::vector<unsigned short> > & one_ring) {
+void collect_one_ring (const std::vector<glm::vec3> &vertices, const std::vector<std::vector<unsigned short> > &triangles, std::vector<std::vector<unsigned short> > &one_ring) {
+    one_ring.resize (vertices.size ());
+    for (int i = 0; i < triangles.size(); i++) {
+        
+        const std::vector<unsigned short> &ti = triangles[i];
+        for (int j = 0; j < 3; j++) {
+    
+            unsigned short vj = ti[j];
+            for (int k = 1; k < 3; k++) {
+                unsigned int vk = ti[(j + k) % 3];
+                if (std::find(one_ring[vj].begin(), one_ring[vj].end(), vk) == one_ring[vj].end())
+                    one_ring[vj].push_back(vk);
+            }
+        }
+    }
 
 }
 
-void compute_vertex_valences (std::vector<unsigned short> & valences ) {
-
+void compute_vertex_valences(const std::vector<glm::vec3> &vertices, const std::vector<std::vector<unsigned short>> &triangles, std::vector<unsigned int> &valences) {
+    
+    std::vector<std::vector<unsigned short>> one_ring;
+    
+    collect_one_ring( vertices, triangles, one_ring);
+    
+    valences.clear();
+    valences.resize(vertices.size());
+    
+    for(int i = 0 ; i < vertices.size() ; i++)
+        valences[i] = one_ring[i].size();
 }
 /*******************************************************************************/
 
-int main( void )
+int main()
 {
     // Initialise GLFW
     if( !glfwInit() )
@@ -176,7 +174,7 @@ int main( void )
     glBindVertexArray(VertexArrayID);
 
     // Create and compile our GLSL program from the shaders
-    GLuint programID = LoadShaders( "vertex_shader.glsl", "fragment_shader.glsl" );
+    GLuint programID = LoadShaders( "../TP2_maillages/vertex_shader.glsl", "../TP2_maillages/fragment_shader.glsl" );
 
     // Get a handle for our "MVP" uniform
     GLuint MatrixID = glGetUniformLocation(programID, "MVP");
@@ -184,7 +182,7 @@ int main( void )
     GLuint ModelMatrixID = glGetUniformLocation(programID, "M");
 
     // Load the texture
-    GLuint Texture = loadDDS("uvmap.DDS");
+    GLuint Texture = loadDDS("../TP2_maillages/uvmap.DDS");
 
     // Get a handle for our "myTextureSampler" uniform
     GLuint TextureID  = glGetUniformLocation(programID, "myTextureSampler");
@@ -196,16 +194,17 @@ int main( void )
     std::vector<glm::vec3> indexed_normals;
 
     //Chargement du fichier de maillage
-    std::string filename("suzanne.off");
+    std::string filename("../TP2_maillages/suzanne.off");
     loadOFF(filename, indexed_vertices, indices, triangles );
     indexed_uvs.resize(indexed_vertices.size(), glm::vec2(1.)); //List vide de UV
     
     std::vector<glm::vec3> normals;
-    compute_triangle_normals(normals, indexed_vertices, triangles);
+    compute_triangle_normals(indexed_vertices, triangles, normals);
     //****************************************************************/
     //Calculer les normales par sommet
     indexed_normals.resize(indexed_vertices.size(), glm::vec3(1.));
-    compute_smooth_vertex_normals(0, indexed_normals);
+    std::vector<glm::vec3> vertex_normals;
+    compute_smooth_vertex_normals(indexed_vertices, triangles, 0, vertex_normals);
     //****************************************************************/
 
     // Load it into a VBO
