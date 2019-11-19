@@ -85,6 +85,14 @@ double distMax(ANNdistArray distances, int nbDist){
     return max;
 }
 
+
+
+void APSS( Vec3 inputPoint , Vec3 &outputPoint , Vec3 &outputNormal , std::vector<Vec3> const & positions,
+        std::vector<Vec3> const &normals , BasicANNkdTree const &kdtree , int kernel_type , float radius , unsigned int
+        nbIterations = 10 , unsigned int knn = 20) {
+    
+}
+
 /**
  * @param inputPoint Point d'entrée
  * @param outputPoint Point projeté
@@ -463,7 +471,7 @@ int main (int argc, char ** argv) {
 
     {
         // Load a first pointset, and build a kd-tree:
-        loadPN("pointsets/igea.pn" , positions , normals);
+        loadPN("pointsets/face.pn" , positions , normals);
 
         BasicANNkdTree kdtree;
         kdtree.build(positions);
@@ -487,7 +495,9 @@ int main (int argc, char ** argv) {
             Vec3 inputPoint = positions2[i];
             Vec3 outputPoint;
             Vec3 outputNormal;
-    
+            
+            //Pour tester d'autres types de poids, il suffit de changer le paramètre kernel_type avec les options: GAUSSIAN ou WENDLAND
+            
             HPSS(inputPoint, outputPoint, outputNormal, positions, normals, kdtree, GAUSSIAN, 10, 10, 20);
             projectedPoints.push_back(outputPoint);
         }
